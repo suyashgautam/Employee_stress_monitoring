@@ -35,6 +35,6 @@ def download():
                 print("directory doesn't exist, creating it now")
                 os.makedirs(dpath + "\\" + head, exist_ok=True)
                 print("directory created, download initiated")
-                block_blob_service.get_blob_to_path('suyash', blob.name, dpath + "\\" + head + "\\" + tail)
+                block_blob_service.get_blob_to_path('<container name>', blob.name, dpath + "\\" + head + "\\" + tail)
         else:
-            block_blob_service.get_blob_to_path('suyash', blob.name, blob.name)
+            block_blob_service.get_blob_to_path('<container name>', blob.name, blob.name)
