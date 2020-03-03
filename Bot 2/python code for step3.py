@@ -9,9 +9,10 @@ import pandas as pd
 
 def analyze():
 
-    subscription_key = "c55ec6fb7454432fba8eeef2c2bdbf3f"
+    #Enter Subscription key and resource name
+    subscription_key = "<Enter subscription key for face api>"
 
-    face_api_url = 'https://automathon.cognitiveservices.azure.com/face/v1.0/detect'
+    face_api_url = 'https://<Enter name of the resource>.cognitiveservices.azure.com/face/v1.0/detect'
     headers = {'Ocp-Apim-Subscription-Key': subscription_key, "Content-type": "application/octet-stream"}
 
     params = {
@@ -20,8 +21,9 @@ def analyze():
         'returnFaceAttributes': 'emotion',
     }
 
+    #Enter desktop user name in place of <user name>
     dicti = {}
-    path="C:\\Users\\suyashadmin\\Desktop\\data\\pics\\"
+    path="C:\\Users\\<user name>\\Desktop\\data\\pics\\"
     print(path)
 
     for time1 in os.listdir(path):
@@ -55,5 +57,5 @@ def analyze():
                     dicti[time1][Keymax] = dicti[time1][Keymax] + 1
 
     df=pd.DataFrame.from_dict(dicti,orient='index')
-    df.to_csv(r'C:\Users\suyashadmin\Desktop\data\data.csv')
-    df.sort_index().plot.barh(figsize=(25,30),width=1).get_figure().savefig('C:\\Users\\suyashadmin\\Desktop\\data\\output.png') #replace <user name> with user name of the computer
+    df.to_csv(r'C:\Users\<user name>\Desktop\data\data.csv') #Enter user name in place of <user name>
+    df.sort_index().plot.barh(figsize=(25,30),width=1).get_figure().savefig('C:\\Users\\<user name>\\Desktop\\data\\output.png') #replace <user name> with user name of the computer
