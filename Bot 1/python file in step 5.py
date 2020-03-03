@@ -4,12 +4,12 @@ from azure.storage.blob import BlockBlobService, PublicAccess
 def upload_files(hello12):
     #replace account_name with your azure storage account name and account key with your key
 
-    block_blob_service = BlockBlobService(account_name='samplesuyash',
-                                          account_key='2LYv7Za5Sp8pNY+BIZH2HPaWauOePFEnXMK50xII0CboMRKg/4/VsL3TjCmYMVLAzIsJR6lH0r3ryqHuxU4SaQ==')
+    block_blob_service = BlockBlobService(account_name='<Enter account name>',
+                                          account_key='<Enter account key>')
 
 
     # Create a container called 'quickstartblobs'.
-    container_name = 'suyash'
+    container_name = '<Enter container name>'
     block_blob_service.create_container(container_name)
 
     # Set the permission so the blobs are public.
