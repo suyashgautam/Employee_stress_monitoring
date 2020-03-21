@@ -40,3 +40,4 @@ Enter details of your face api in "python code for step3.py" in required fields
 NOTE: In the code as mentioned in "python code for step2.py"
 Please chnage <account name> ,<account key>,<container name> as per your azure storage api
 Please change <user name> as per uour computer's user name.
+Demo Video Link  :https://youtu.be/ut2KyHXy-bQ 
